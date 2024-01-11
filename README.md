@@ -182,37 +182,70 @@ Consider setting up the TaskServer in the cloud, such as Azure or any other clou
 **Docker Container:**
 For easy installation, you can opt for the unofficial Docker container. Check out the latest Docker container here: [Docker Container](https://github.com/ogarcia/docker-taskd).
 
+## [#WingTask](https://app.wingtask.com/)
 
-## [Inthe.am](https://github.com/coddingtonbear/inthe.am) 
-It is an open-source project that enables users to create their own TaskServer for free. The process is simple:
+### 1. [Sign Up](https://app.wingtask.com/signup) at WingTask
 
-1. **Sign Up:** Start by registering on the [Inthe.am](https://inthe.am/) website.
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/90efd152-87ed-4d39-8a9b-acdffe4879a5)
 
-<img width="1710" alt="Screenshot 2023-09-10 at 6 10 17 PM" src="https://github.com/Pavel401/taskwarrior-flutter/assets/47685150/a85b7f6d-ff0a-45d3-abca-9a65207a899e">
+### 2. Download Configuration Files
 
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/436435d5-c33a-4ffe-a839-c907563eecf2)
 
-2. **Configuration Files:** After registration, navigate to the Configuration section. In this section, you will find all the necessary configuration files required to set up your TaskServer.
+### 3. Once extracted, you'll find the following files and folders:
 
-	Download the following three files:
+- `install.sh`
+- `README`
+- `taskrc`
+- `wingtask_certs`
 
-   - Your Certificate: `private.certificate.pem`
-   - Your Key: `private.key.pem`
-   - Server Certificate: `ca.cert.pem`
-
-3. **TaskWarrior Setup:** With the configuration files in hand, open the TaskWarrior mobile app and configure it to connect to your newly created TaskServer. Follow the app's prompts to input the necessary details.
-
-
-<img width="1710" alt="Screenshot 2023-09-10 at 6 10 17 PM" src="https://github.com/Pavel401/taskwarrior-flutter/assets/47685150/c0d0f20a-c153-4002-b6a8-1fc64e39748c">
-
-<img width="1710" alt="Screenshot 2023-09-10 at 6 10 17 PM" src="https://github.com/Pavel401/taskwarrior-flutter/assets/47685150/f5de70bf-a913-40dd-921d-7f2d43d3c4dd">
+![Files and Folders](https://github.com/CCExtractor/taskwarrior-flutter/assets/47685150/34fc908a-682d-426c-a5a9-54043a3c7583)
 
 
+### 4. Run install script
+
+#### 4.1 Change the directory to the respective folder having configuration files
+
+`cd /mnt/c/...../folder_name/wingtask_configuration`
+
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/732b58d0-3826-4de0-b253-3d88cae7edcd)
+
+#### 4.2 Run the install script
+
+- run 2 commands
+
+`chmod +x install.sh`
+
+`./install.sh`
+
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/a088befa-9a33-494e-8383-ba75a0df1f31)
+
+- if the above commands run successfully, you'll get an interface like this
+
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/2096249c-165e-41d9-941c-4ce1f3dc81f6)
+
+### 5. Syncing for the first time
+
+- run `task sync init`
+
+![image](https://github.com/Rancho-rachit/taskwarrior-flutter/assets/111473259/b562e125-1ca1-480b-8b96-6d7c709eb4b9)
+
+### 6. Configure the certificates in the app:
+   - Select `example@gmail.com.cert.pem` for "Configure Server Certificate."
+   - Select `example@gmail.com.key.pem` for "Configure TaskServer Key."
+   - Select `letsencrypt_root_cert.pem` for "Configure Your Certificate."
+
+![Configure Certificates](https://github.com/CCExtractor/taskwarrior-flutter/assets/47685150/8b73f087-152a-4207-9d93-87d0b87404d8)
+
+### 7. Click on the "Stats" button in the app bar and check the response. If the response code is 200, you are good to go.
+
+![Check Response](https://github.com/CCExtractor/taskwarrior-flutter/assets/47685150/21c82242-63fe-46d1-9f30-c681ca9a699f)
+
+### 8. Sync your tasks and enjoy!
+
+Feel free to reach out if you encounter any issues. 
 
 ---
-
-
-
-
 
 ## Contact
 
